@@ -82,7 +82,7 @@ class Calculator {
         return result
     }
     
-    func mathOp(args : [Int], beg : Int, op : (Int, Int)) -> Int {
+    func mathOp(args : [Int], beg : Int, op : (Int, Int) -> Int) -> Int {
         var result = beg
         for i in args {
             result = op(i, result)
@@ -90,8 +90,9 @@ class Calculator {
         return result
     }
     
-     func mathOp(lhs: Int, rhs: Int, op: (Int,Int)) -> Int {
-        return op(lhs, rhs)
+     func mathOp(lhs: Int, rhs: Int, op: (Int,Int) -> Int) -> Int {
+        let result = op(lhs, rhs)
+        return result
     }
     
     
