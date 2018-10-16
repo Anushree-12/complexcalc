@@ -50,7 +50,7 @@ class Calculator {
     }
     
     func multiply(_ elements: [Int]) -> Int {
-        var result: Int = 0
+        var result: Int = 1
         for i in elements {
             result = result * i
         }
